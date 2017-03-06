@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * scot mclean
+ * 200332937
+ * march 5th 2017
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,26 +17,36 @@ using System.Windows.Forms;
 namespace MovieBonanza
 {
     public partial class SelectionForm : Form
-    {
+    {   
+        //Bool to make things work if someone clicked a back button
+        private bool _firstTime = true;
         public SelectionForm()
         {
+            //Checks to see if info.title exists. If it does, it means that this form was already submitted
+            // and a back button was pressed. So, fill in the information from info
             InitializeComponent();
             if (Info.title != null)
             {
                 TitleTextBox.Text = Info.title;
+                _firstTime = false;
                 MovieListBox_SelectedIndexChanged(null, null);
-                NextButton.Enabled = true;
             }
         }
 
         private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Info.title == null)
+            //checking if the title exists.
+            if (_firstTime)
             {
                 TitleTextBox.Text = MovieListBox.Text.ToString();
             }
+            else
+            {
+                _firstTime = true;
+            }
+            //enable next button if it does
             NextButton.Enabled = true;
-
+            //if statements assigning the values to the title, category, cost and picture based off each movie
             if (TitleTextBox.Text == "Season of the Witch")
             {
                 CategoryTextBox.Text = "Sci-Fi";
@@ -151,6 +167,7 @@ namespace MovieBonanza
                 CostTextBox.Text = "4.99";
                 SmallPictureBox.Image = Properties.Resources.realsteel;
             }
+            //assigning the public getters to the related text boxes.
             Info.category = CategoryTextBox.Text;
             Info.title = TitleTextBox.Text;
             Info.cost = CostTextBox.Text;

@@ -14,6 +14,7 @@ namespace MovieBonanza
     {
         public StreamForm()
         {
+            //assign the cost and title info to the textboxes.
             InitializeComponent();
             TotalValueLabel.Text = Info.cost;
             MovieLabel.Text = Info.title + " will begin shortly!";
@@ -26,6 +27,7 @@ namespace MovieBonanza
 
         private void OKButton_Click(object sender, EventArgs e)
         {
+            //close the application
             Application.Exit();
         }
     }

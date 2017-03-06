@@ -52,6 +52,10 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.StreamButton = new System.Windows.Forms.Button();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.streamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.MovieSelectedGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BigPictureBox)).BeginInit();
@@ -71,12 +75,18 @@
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backToolStripMenuItem,
+            this.cancelToolStripMenuItem,
+            this.streamToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
@@ -88,7 +98,7 @@
             this.MovieSelectedGroupBox.Controls.Add(this.CategoryLabel);
             this.MovieSelectedGroupBox.Controls.Add(this.TitleTextBox);
             this.MovieSelectedGroupBox.Controls.Add(this.TitleLabel);
-            this.MovieSelectedGroupBox.Location = new System.Drawing.Point(13, 28);
+            this.MovieSelectedGroupBox.Location = new System.Drawing.Point(14, 28);
             this.MovieSelectedGroupBox.Name = "MovieSelectedGroupBox";
             this.MovieSelectedGroupBox.Size = new System.Drawing.Size(288, 348);
             this.MovieSelectedGroupBox.TabIndex = 1;
@@ -107,6 +117,7 @@
             // 
             this.CategoryTextBox.Location = new System.Drawing.Point(10, 77);
             this.CategoryTextBox.Name = "CategoryTextBox";
+            this.CategoryTextBox.ReadOnly = true;
             this.CategoryTextBox.Size = new System.Drawing.Size(272, 20);
             this.CategoryTextBox.TabIndex = 3;
             // 
@@ -123,6 +134,7 @@
             // 
             this.TitleTextBox.Location = new System.Drawing.Point(10, 37);
             this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.ReadOnly = true;
             this.TitleTextBox.Size = new System.Drawing.Size(272, 20);
             this.TitleTextBox.TabIndex = 1;
             // 
@@ -159,6 +171,7 @@
             // 
             this.DVDTextBox.Location = new System.Drawing.Point(127, 69);
             this.DVDTextBox.Name = "DVDTextBox";
+            this.DVDTextBox.ReadOnly = true;
             this.DVDTextBox.Size = new System.Drawing.Size(60, 20);
             this.DVDTextBox.TabIndex = 13;
             this.DVDTextBox.Visible = false;
@@ -188,6 +201,7 @@
             // 
             this.GrandTotalTextBox.Location = new System.Drawing.Point(127, 195);
             this.GrandTotalTextBox.Name = "GrandTotalTextBox";
+            this.GrandTotalTextBox.ReadOnly = true;
             this.GrandTotalTextBox.Size = new System.Drawing.Size(60, 20);
             this.GrandTotalTextBox.TabIndex = 10;
             // 
@@ -204,6 +218,7 @@
             // 
             this.TaxTextBox.Location = new System.Drawing.Point(127, 153);
             this.TaxTextBox.Name = "TaxTextBox";
+            this.TaxTextBox.ReadOnly = true;
             this.TaxTextBox.Size = new System.Drawing.Size(60, 20);
             this.TaxTextBox.TabIndex = 8;
             // 
@@ -220,6 +235,7 @@
             // 
             this.SubTotalTextBox.Location = new System.Drawing.Point(127, 110);
             this.SubTotalTextBox.Name = "SubTotalTextBox";
+            this.SubTotalTextBox.ReadOnly = true;
             this.SubTotalTextBox.Size = new System.Drawing.Size(60, 20);
             this.SubTotalTextBox.TabIndex = 6;
             // 
@@ -236,6 +252,7 @@
             // 
             this.CostTextBox.Location = new System.Drawing.Point(127, 26);
             this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.ReadOnly = true;
             this.CostTextBox.Size = new System.Drawing.Size(60, 20);
             this.CostTextBox.TabIndex = 5;
             // 
@@ -277,6 +294,34 @@
             this.StreamButton.Text = "Stream";
             this.StreamButton.UseVisualStyleBackColor = true;
             this.StreamButton.Click += new System.EventHandler(this.StreamButton_Click);
+            // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.backToolStripMenuItem.Text = "Back";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
+            // 
+            // cancelToolStripMenuItem
+            // 
+            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cancelToolStripMenuItem.Text = "Cancel";
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
+            // 
+            // streamToolStripMenuItem
+            // 
+            this.streamToolStripMenuItem.Name = "streamToolStripMenuItem";
+            this.streamToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.streamToolStripMenuItem.Text = "Stream";
+            this.streamToolStripMenuItem.Click += new System.EventHandler(this.streamToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // OrderForm
             // 
@@ -330,5 +375,9 @@
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button StreamButton;
+        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem streamToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

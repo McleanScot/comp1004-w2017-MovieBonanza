@@ -113,6 +113,7 @@
             // 
             this.CostTextBox.Location = new System.Drawing.Point(351, 90);
             this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.ReadOnly = true;
             this.CostTextBox.Size = new System.Drawing.Size(70, 20);
             this.CostTextBox.TabIndex = 6;
             // 
@@ -120,6 +121,7 @@
             // 
             this.CategoryTextBox.Location = new System.Drawing.Point(160, 90);
             this.CategoryTextBox.Name = "CategoryTextBox";
+            this.CategoryTextBox.ReadOnly = true;
             this.CategoryTextBox.Size = new System.Drawing.Size(171, 20);
             this.CategoryTextBox.TabIndex = 5;
             // 
@@ -127,6 +129,7 @@
             // 
             this.TitleTextBox.Location = new System.Drawing.Point(160, 37);
             this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.ReadOnly = true;
             this.TitleTextBox.Size = new System.Drawing.Size(261, 20);
             this.TitleTextBox.TabIndex = 4;
             // 

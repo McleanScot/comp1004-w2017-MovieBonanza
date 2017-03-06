@@ -47,7 +47,7 @@
             // ChargedAmountLabel
             // 
             this.ChargedAmountLabel.AutoSize = true;
-            this.ChargedAmountLabel.Location = new System.Drawing.Point(41, 77);
+            this.ChargedAmountLabel.Location = new System.Drawing.Point(75, 77);
             this.ChargedAmountLabel.Name = "ChargedAmountLabel";
             this.ChargedAmountLabel.Size = new System.Drawing.Size(146, 13);
             this.ChargedAmountLabel.TabIndex = 1;
@@ -57,7 +57,7 @@
             // MovieLabel
             // 
             this.MovieLabel.AutoSize = true;
-            this.MovieLabel.Location = new System.Drawing.Point(143, 109);
+            this.MovieLabel.Location = new System.Drawing.Point(101, 117);
             this.MovieLabel.Name = "MovieLabel";
             this.MovieLabel.Size = new System.Drawing.Size(86, 13);
             this.MovieLabel.TabIndex = 2;
@@ -77,7 +77,7 @@
             // TotalValueLabel
             // 
             this.TotalValueLabel.AutoSize = true;
-            this.TotalValueLabel.Location = new System.Drawing.Point(193, 77);
+            this.TotalValueLabel.Location = new System.Drawing.Point(236, 77);
             this.TotalValueLabel.Name = "TotalValueLabel";
             this.TotalValueLabel.Size = new System.Drawing.Size(35, 13);
             this.TotalValueLabel.TabIndex = 4;
