@@ -15,6 +15,18 @@ namespace MovieBonanza
         public StreamForm()
         {
             InitializeComponent();
+            TotalValueLabel.Text = Info.cost;
+            MovieLabel.Text = Info.title + " will begin shortly!";
+        }
+
+        private void ChargedAmountLabel_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void OKButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

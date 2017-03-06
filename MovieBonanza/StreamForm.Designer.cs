@@ -30,8 +30,9 @@
         {
             this.ThankYouLabel = new System.Windows.Forms.Label();
             this.ChargedAmountLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.MovieLabel = new System.Windows.Forms.Label();
             this.OKButton = new System.Windows.Forms.Button();
+            this.TotalValueLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ThankYouLabel
@@ -48,18 +49,20 @@
             this.ChargedAmountLabel.AutoSize = true;
             this.ChargedAmountLabel.Location = new System.Drawing.Point(41, 77);
             this.ChargedAmountLabel.Name = "ChargedAmountLabel";
-            this.ChargedAmountLabel.Size = new System.Drawing.Size(275, 13);
+            this.ChargedAmountLabel.Size = new System.Drawing.Size(146, 13);
             this.ChargedAmountLabel.TabIndex = 1;
-            this.ChargedAmountLabel.Text = "Your Credit Card will be billed [Replace with total amount]";
+            this.ChargedAmountLabel.Text = "Your Credit Card will be billed:";
+            this.ChargedAmountLabel.Click += new System.EventHandler(this.ChargedAmountLabel_Click);
             // 
-            // label3
+            // MovieLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "[Replace with movie Title] will begin shortly!";
+            this.MovieLabel.AutoSize = true;
+            this.MovieLabel.Location = new System.Drawing.Point(143, 109);
+            this.MovieLabel.Name = "MovieLabel";
+            this.MovieLabel.Size = new System.Drawing.Size(86, 13);
+            this.MovieLabel.TabIndex = 2;
+            this.MovieLabel.Text = "will begin shortly!";
+            this.MovieLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // OKButton
             // 
@@ -69,14 +72,25 @@
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
+            // 
+            // TotalValueLabel
+            // 
+            this.TotalValueLabel.AutoSize = true;
+            this.TotalValueLabel.Location = new System.Drawing.Point(193, 77);
+            this.TotalValueLabel.Name = "TotalValueLabel";
+            this.TotalValueLabel.Size = new System.Drawing.Size(35, 13);
+            this.TotalValueLabel.TabIndex = 4;
+            this.TotalValueLabel.Text = "label1";
             // 
             // StreamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(371, 227);
+            this.Controls.Add(this.TotalValueLabel);
             this.Controls.Add(this.OKButton);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.MovieLabel);
             this.Controls.Add(this.ChargedAmountLabel);
             this.Controls.Add(this.ThankYouLabel);
             this.Name = "StreamForm";
@@ -90,7 +104,8 @@
 
         private System.Windows.Forms.Label ThankYouLabel;
         private System.Windows.Forms.Label ChargedAmountLabel;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label MovieLabel;
         private System.Windows.Forms.Button OKButton;
+        private System.Windows.Forms.Label TotalValueLabel;
     }
 }

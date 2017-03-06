@@ -15,12 +15,21 @@ namespace MovieBonanza
         public SelectionForm()
         {
             InitializeComponent();
+            if (Info.title != null)
+            {
+                TitleTextBox.Text = Info.title;
+                MovieListBox_SelectedIndexChanged(null, null);
+                NextButton.Enabled = true;
+            }
         }
 
         private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TitleTextBox.Text = MovieListBox.Text.ToString();
-
+            if (Info.title == null)
+            {
+                TitleTextBox.Text = MovieListBox.Text.ToString();
+            }
+            NextButton.Enabled = true;
 
             if (TitleTextBox.Text == "Season of the Witch")
             {
@@ -142,6 +151,18 @@ namespace MovieBonanza
                 CostTextBox.Text = "4.99";
                 SmallPictureBox.Image = Properties.Resources.realsteel;
             }
+            Info.category = CategoryTextBox.Text;
+            Info.title = TitleTextBox.Text;
+            Info.cost = CostTextBox.Text;
+            Info.image = SmallPictureBox.Image;
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            OrderForm orderForm = new OrderForm();
+            orderForm.Show();
         }
     }
 }
