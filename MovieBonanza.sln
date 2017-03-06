@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieBonanza", "MovieBonanza\MovieBonanza.csproj", "{B10082EE-64DD-4F07-AF6E-B6776D9553BB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{F6A31C6B-9B90-44BA-9FAA-51C826133338}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Desktop\New folder\cedar.jpg = ..\..\..\..\..\Desktop\New folder\cedar.jpg
+		..\..\..\..\..\Desktop\New folder\companymen.jpg = ..\..\..\..\..\Desktop\New folder\companymen.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

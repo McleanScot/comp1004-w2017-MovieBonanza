@@ -77,6 +77,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SelectionForm.resx">
       <DependentUpon>SelectionForm.cs</DependentUpon>
@@ -96,6 +97,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cedar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\companymen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footloose_poster1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenhornet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_am_number_four.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\just_go_with_it.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Death_Race_2_poster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dilemma.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eagle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mechanic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No_Strings_Attached_Poster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\realsteel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sanctum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theotherwoman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the-rite-poster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the-roommate-poster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waiting_for_forever.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\way_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witch.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
